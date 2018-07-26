@@ -167,7 +167,7 @@ class Mailer
                 $mail->IsSMTP();
                 $mail->Host = $mailhost;
                 $mail->Port = $mailport;
-                if ($mailauth === true) {
+                if ($mailauth == true) {
                     $mail->SMTPAuth = true;
                     $mail->Username = $mailuser;
                     $mail->Password = $mailpass;
@@ -187,7 +187,7 @@ class Mailer
         }
 
         $retval = $mail->send();
-        if ($retval === true) {
+        if ($retval == true) {
             return true;
         } else {
             return false;
